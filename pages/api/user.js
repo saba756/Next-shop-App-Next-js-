@@ -10,7 +10,6 @@ async function handleUser(req, res) {
   }
 
   try {
-    console.log("13");
     const user = await fetchJson(`${CMS_URL}/users/me`, {
       headers: { Authorization: `Bearer ${jwt}` },
     });

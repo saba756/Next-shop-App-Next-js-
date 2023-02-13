@@ -2,6 +2,7 @@ import { fetchJson } from "../../lib/api";
 import cookie from "cookie";
 const { CMS_URL } = process.env;
 async function handleLogin(req, res) {
+  console.log("req", req);
   if (req.method !== "POST") {
     res.status(405).end();
     return;
