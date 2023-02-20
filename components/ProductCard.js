@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 function ProductCard({ product }) {
+  console.log("product", product);
   return (
     <div className="border w-80 shadow hover:shadow-xl">
       <Link href={`/products/${product.id}`}>

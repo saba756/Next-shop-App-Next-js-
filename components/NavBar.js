@@ -5,7 +5,6 @@ import { useUser, useSignOut } from "../hooks/user";
 const NavBar = () => {
   const user = useUser();
   const signOut = useSignOut();
-
   return (
     <nav className="px-2 py-1">
       <ul className="flex gap-2">
@@ -15,6 +14,9 @@ const NavBar = () => {
         <li role="separator" className="flex-1" />
         {user ? (
           <>
+            <li>
+              <Link href="/cart-item">Cart</Link>
+            </li>
             <li>{user.name}</li>
             <li>
               <button onClick={signOut}>Sign out</button>
